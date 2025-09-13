@@ -1,0 +1,10 @@
+<!-- Guarda esto como favicon.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="BoldElin logo">
+  <!-- Fondo: caja redondeada -->
+  <rect width="64" height="64" rx="12" ry="12" fill="#0f172a"></rect>
+  <!-- Grupo centrado y rotado para la B -->
+  <g transform="translate(32 32) rotate(-12)">
+    <!-- La B: texto en negrita. Ajusta font-size / font-family si quieres otro look -->
+    <text x="0" y="0" text-anchor="middle" dominant-baseline="middle" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial" font-weight="800" font-size="34" fill="#ffffff" style="paint-order:stroke fill;">B</text>
+  </g>
+</svg>
