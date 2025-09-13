@@ -1,11 +1,11 @@
 import { type FC } from 'react';
-import { HomePage } from '@/pages';
+import { AppRouter } from '@/components';
 
 /**
  * Main application component
  */
 const App: FC = () => {
-  return <HomePage />;
+  return <AppRouter />;
 };
 
 export default App;

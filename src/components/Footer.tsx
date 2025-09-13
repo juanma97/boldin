@@ -21,7 +21,7 @@ export const Footer: FC<FooterProps> = ({ className }) => {
           {/* Brand */}
           <div className="footer-section">
             <div className="footer-brand">
-              𝐁𝐨𝐥𝐝𝐈𝐧
+              BoldelIn
             </div>
             <p className="footer-brand-desc">
               Your content formatting tool
@@ -48,7 +48,7 @@ export const Footer: FC<FooterProps> = ({ className }) => {
         </div>
         
         <div className="footer-bottom">
-          <p>© {currentYear} BoldIn</p>
+          <p>© {currentYear} BoldelIn</p>
         </div>
       </div>
     </footer>

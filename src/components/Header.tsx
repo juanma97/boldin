@@ -17,20 +17,14 @@ export const Header: FC<HeaderProps> = ({ className }) => {
       <div className="container">
         <div className="header-content">
           <div>
-            <a href="#" className="logo">
-              𝐁𝐨𝐥𝐝𝐈𝐧
+            <a href="#/" className="logo">
+              BoldelIn
             </a>
           </div>
           
           <nav className="nav">
-            <a href="#" className="nav-link">
+            <a href="#/how-it-works" className="nav-link">
               How it works
-            </a>
-            <a href="#" className="nav-link">
-              FAQ
-            </a>
-            <a href="#" className="nav-link">
-              Blog
             </a>
           </nav>
         </div>

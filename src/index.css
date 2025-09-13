@@ -356,6 +356,274 @@ body {
   outline-offset: 2px;
 }
 
+/* How It Works Page Styles */
+.how-it-works-content {
+  margin-top: 2rem;
+}
+
+.section {
+  margin-bottom: 4rem;
+  padding: 2rem 0;
+}
+
+.section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.section h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+/* Problem Grid */
+.problem-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.problem-item {
+  text-align: center;
+  padding: 1.5rem;
+  background: #f9fafb;
+  border-radius: 0.75rem;
+}
+
+.problem-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Solution Section */
+.solution-explanation {
+  background: white;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  border: 2px solid #e5e7eb;
+}
+
+.unicode-demo {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background: #f9fafb;
+  border-radius: 0.5rem;
+}
+
+.demo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  padding: 0.5rem 0;
+}
+
+.demo-label {
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.demo-text {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+/* Steps Container */
+.steps-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 0.75rem;
+  border: 2px solid #e5e7eb;
+}
+
+.step-number {
+  background: #2563eb;
+  color: white;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.step-content h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* LinkedIn Reasons */
+.linkedin-reasons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.reason {
+  padding: 1.5rem;
+  background: #eff6ff;
+  border-radius: 0.75rem;
+  border-left: 4px solid #2563eb;
+}
+
+/* Technical Grid */
+.technical-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.tech-item {
+  padding: 1.5rem;
+  background: white;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Free Section */
+.free-section {
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  border-radius: 1rem;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.free-badge h2 {
+  color: #2563eb;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.free-reasons {
+  display: grid;
+  gap: 1rem;
+  margin: 2rem 0;
+  text-align: left;
+}
+
+.free-reason {
+  padding: 1rem;
+  background: white;
+  border-radius: 0.5rem;
+  border-left: 4px solid #10b981;
+}
+
+.free-guarantee {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #10b981;
+  color: white;
+  border-radius: 0.75rem;
+  font-size: 1.125rem;
+}
+
+/* Comparison Table */
+.comparison-table {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 1px;
+  background: #e5e7eb;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  margin-top: 2rem;
+}
+
+.comparison-header {
+  display: contents;
+}
+
+.comparison-header > div {
+  background: #2563eb;
+  color: white;
+  padding: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.comparison-row {
+  display: contents;
+}
+
+.comparison-row > div {
+  background: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.comparison-row > div:first-child {
+  text-align: left;
+  font-weight: 500;
+}
+
+.check {
+  color: #10b981;
+  font-size: 1.25rem;
+}
+
+.cross {
+  color: #ef4444;
+  font-size: 1.25rem;
+}
+
+.partial {
+  color: #f59e0b;
+  font-size: 1.25rem;
+}
+
+/* CTA Section */
+.cta-section {
+  background: #1f2937;
+  color: white;
+  border-radius: 1rem;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.cta-section h2 {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta-content p {
+  font-size: 1.125rem;
+  color: #d1d5db;
+  margin-bottom: 2rem;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .hero h1 {
@@ -398,5 +666,38 @@ body {
   
   .hero h1 {
     font-size: 1.75rem;
+  }
+  
+  /* How It Works Page Mobile */
+  .problem-grid,
+  .steps-container,
+  .linkedin-reasons,
+  .technical-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .comparison-table {
+    grid-template-columns: 1fr;
+  }
+  
+  .comparison-header > div:not(:first-child),
+  .comparison-row > div:not(:first-child) {
+    display: none;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+  }
+  
+  .section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .free-badge h2 {
+    font-size: 2rem;
+  }
+  
+  .cta-section h2 {
+    font-size: 2rem;
   }
 }
