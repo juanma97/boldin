@@ -27,24 +27,12 @@ export const Footer: FC<FooterProps> = ({ className }) => {
               Your content formatting tool
             </p>
           </div>
-          
-          {/* Links */}
-          <div className="footer-section">
-            <h3>Links</h3>
-            <ul>
-              <li><a href="#">Legal Notice</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Cookie Policy</a></li>
-            </ul>
-          </div>
+        
           
           {/* Free Resources */}
           <div className="footer-section">
-            <h3>Free Resources</h3>
+            <h3>About Us</h3>
             <ul>
-              <li><a href="#">Text Formatter</a></li>
-              <li><a href="#">Bold Text</a></li>
-              <li><a href="#">Italic Text</a></li>
               <li><a href="#">Blog</a></li>
             </ul>
           </div>

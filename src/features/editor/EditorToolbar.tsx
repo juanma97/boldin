@@ -60,6 +60,42 @@ export const EditorToolbar: FC<EditorToolbarProps> = ({
         icon: '𝙼',
         shortcut: 'Ctrl+M',
       },
+      {
+        style: 'bolditalic' as const,
+        label: 'Bold and Italic',
+        icon: '𝑨',
+        shortcut: 'Ctrl+Shift+B',
+      },
+      {
+        style: 'underline' as const,
+        label: 'Underline',
+        icon: 'A͟',
+        shortcut: 'Ctrl+U',
+      },
+      {
+        style: 'circled' as const,
+        label: 'Circled',
+        icon: 'Ⓐ',
+        shortcut: 'Ctrl+O',
+      },
+      {
+        style: 'strikethrough' as const,
+        label: 'Strikethrough',
+        icon: 'A̶',
+        shortcut: 'Ctrl+Shift+X',
+      },
+      {
+        style: 'inverted' as const,
+        label: 'Inverted',
+        icon: '∀',
+        shortcut: 'Ctrl+Shift+I',
+      },
+      {
+        style: 'squared' as const,
+        label: 'Squared',
+        icon: '🄰',
+        shortcut: 'Ctrl+Shift+S',
+      },
     ],
     []
   );

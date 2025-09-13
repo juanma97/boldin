@@ -1,7 +1,7 @@
 /**
  * Text formatting styles available in the editor
  */
-export type TextStyle = 'bold' | 'italic' | 'monospace';
+export type TextStyle = 'bold' | 'italic' | 'monospace' | 'bolditalic' | 'underline' | 'circled' | 'strikethrough' | 'inverted' | 'squared';
 
 /**
  * Unicode character mappings for text styles
@@ -11,6 +11,12 @@ export interface UnicodeMapping {
   readonly bold: string;
   readonly italic: string;
   readonly monospace: string;
+  readonly bolditalic: string;
+  readonly underline: string;
+  readonly circled: string;
+  readonly strikethrough: string;
+  readonly inverted: string;
+  readonly squared: string;
 }
 
 /**
