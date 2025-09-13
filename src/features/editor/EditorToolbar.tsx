@@ -1,5 +1,4 @@
 import { type FC, useMemo } from 'react';
-import { Button } from '@/components/Button';
 import type { TextStyle } from '@/types';
 
 /**
@@ -93,43 +92,37 @@ export const EditorToolbar: FC<EditorToolbarProps> = ({
 
   return (
     <div
-      className="flex flex-wrap gap-3 p-4 bg-gray-50 border-b border-gray-200"
+      className="editor-toolbar"
       role="toolbar"
       aria-label="Text formatting toolbar"
     >
       {/* Style buttons */}
-      <div className="flex gap-2" role="group" aria-label="Text styles">
+      <div className="style-buttons" role="group" aria-label="Text styles">
         {styleButtons.map(({ style, label, icon, shortcut }) => (
-          <Button
+          <button
             key={style}
-            variant="secondary"
-            size="sm"
+            className="btn btn-outline"
             onClick={() => handleStyleClick(style)}
             disabled={!hasSelection || isProcessing}
             aria-label={`Apply ${label} style (${shortcut})`}
             title={`${label} (${shortcut})`}
-            className="font-mono text-lg min-w-[3rem]"
           >
             {icon}
-          </Button>
+          </button>
         ))}
       </div>
 
-      {/* Separator */}
-      <div className="w-px bg-gray-300 self-stretch" aria-hidden="true" />
-
       {/* Copy button */}
-      <Button
-        variant="primary"
-        size="sm"
+      <button
+        className="btn btn-primary btn-copy"
         onClick={handleCopyClick}
         disabled={!hasContent || isProcessing}
-        isLoading={isProcessing}
         aria-label="Copy formatted text to clipboard"
         title="Copy to clipboard"
       >
+        {isProcessing && <span className="spinner"></span>}
         {isProcessing ? 'Copying...' : 'Copy'}
-      </Button>
+      </button>
     </div>
   );
 };

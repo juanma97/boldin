@@ -1,6 +1,5 @@
 import { type ChangeEvent, type FC, type KeyboardEvent, useCallback, useRef } from 'react';
 import type { TextSelection } from '@/types';
-import { cn } from '@/utils';
 
 /**
  * Props for the EditorTextArea component
@@ -113,15 +112,7 @@ export const EditorTextArea: FC<EditorTextAreaProps> = ({
     [value, onChange, handleSelectionChange]
   );
 
-  const textAreaClasses = cn(
-    'w-full min-h-[400px] p-4 text-base font-mono leading-relaxed',
-    'border border-gray-300 rounded-lg',
-    'focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent',
-    'resize-y',
-    'placeholder:text-gray-400',
-    'disabled:bg-gray-100 disabled:cursor-not-allowed',
-    className
-  );
+  const textAreaClasses = `${className || ''}`;
 
   return (
     <textarea

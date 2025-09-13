@@ -28,7 +28,18 @@ export const TextEditor: FC<TextEditorProps> = ({ className }) => {
 
   return (
     <div className={className}>
-      <div className="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
+      <div className="editor-container">
+        <div className="editor-textarea-container">
+          <EditorTextArea
+            value={state.content}
+            onChange={handleTextChange}
+            onSelectionChange={handleSelectionChange}
+            disabled={state.isProcessing}
+            placeholder="0 / 150"
+            className="editor-textarea"
+          />
+        </div>
+        
         <EditorToolbar
           onStyleApply={applyStyle}
           onCopy={copyToClipboard}
@@ -36,28 +47,14 @@ export const TextEditor: FC<TextEditorProps> = ({ className }) => {
           hasSelection={hasSelection}
           hasContent={hasContent}
         />
-        
-        <div className="p-4">
-          <EditorTextArea
-            value={state.content}
-            onChange={handleTextChange}
-            onSelectionChange={handleSelectionChange}
-            disabled={state.isProcessing}
-          />
-        </div>
       </div>
       
       {/* Status information */}
-      <div className="mt-2 text-sm text-gray-500 flex justify-between">
-        <span>
-          Characters: {state.content.length}
-        </span>
-        {hasSelection && state.selection && (
-          <span>
-            Selected: {state.selection.text.length} characters
-          </span>
-        )}
-      </div>
+      {hasSelection && state.selection && (
+        <div className="selection-info">
+          Selected: {state.selection.text.length} characters
+        </div>
+      )}
     </div>
   );
 };

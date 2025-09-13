@@ -15,24 +15,52 @@ export const Footer: FC<FooterProps> = ({ className }) => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className={className}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="py-8 border-t border-gray-200">
-          <div className="text-center space-y-4">
-            <div className="text-sm text-gray-600">
-              Transform your text with Unicode mathematical symbols
+    <footer className={`footer ${className || ''}`}>
+      <div className="container">
+        <div className="footer-content">
+          {/* Brand */}
+          <div className="footer-section">
+            <div className="footer-brand">
+              𝐁𝐨𝐥𝐝𝐈𝐧
             </div>
-            
-            <div className="flex justify-center space-x-6 text-sm text-gray-500">
-              <span>© {currentYear} BoldIn</span>
-              <span>•</span>
-              <span>Made with ❤️ and Unicode</span>
-            </div>
-            
-            <div className="text-xs text-gray-400">
-              Supports: <span className="font-mono">𝐁𝐨𝐥𝐝</span>, <span className="font-mono">𝐼𝑡𝑎𝑙𝑖𝑐</span>, <span className="font-mono">𝙼𝚘𝚗𝚘𝚜𝚙𝚊𝚌𝚎</span>
-            </div>
+            <p className="footer-brand-desc">
+              Your content formatting tool
+            </p>
           </div>
+          
+          {/* Links */}
+          <div className="footer-section">
+            <h3>Links</h3>
+            <ul>
+              <li><a href="#">Legal Notice</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Cookie Policy</a></li>
+            </ul>
+          </div>
+          
+          {/* Free Resources */}
+          <div className="footer-section">
+            <h3>Free Resources</h3>
+            <ul>
+              <li><a href="#">Text Formatter</a></li>
+              <li><a href="#">Bold Text</a></li>
+              <li><a href="#">Italic Text</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+          
+          {/* Contact */}
+          <div className="footer-section">
+            <h3>Contact</h3>
+            <ul>
+              <li><a href="#">Support</a></li>
+              <li><a href="#">Feedback</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div className="footer-bottom">
+          <p>© {currentYear} BoldIn</p>
         </div>
       </div>
     </footer>

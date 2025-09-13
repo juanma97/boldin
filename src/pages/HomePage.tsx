@@ -7,59 +7,70 @@ import { TextEditor } from '@/features/editor';
  */
 export const HomePage: FC = () => {
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col">
-      <Header className="bg-white shadow-sm" />
+    <div className="min-h-screen flex flex-col">
+      <Header />
       
-      <main className="flex-1 py-8">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">
-              Unicode Text Formatter
-            </h1>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Transform your text with mathematical Unicode characters. 
-              Select text and apply <strong>𝐛𝐨𝐥𝐝</strong>, <em>𝑖𝑡𝑎𝑙𝑖𝑐</em>, or <code>𝚖𝚘𝚗𝚘𝚜𝚙𝚊𝚌𝚎</code> styling 
-              that works everywhere.
-            </p>
+      <main className="main">
+        <div className="container-sm">
+          <div className="hero">
+            <h1>Format your text</h1>
+            <p>Format your text and highlight your content</p>
           </div>
           
-          <TextEditor className="max-w-none" />
+          <TextEditor className="editor" />
           
-          <div className="mt-8 bg-white rounded-lg p-6 shadow-sm">
-            <h2 className="text-lg font-semibold text-gray-900 mb-4">
-              How to use BoldIn
-            </h2>
-            <ol className="space-y-2 text-gray-600">
-              <li className="flex items-start">
-                <span className="bg-[#3b82f6] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-medium mr-3 mt-0.5 flex-shrink-0">
-                  1
-                </span>
-                Paste or type your text in the editor above
-              </li>
-              <li className="flex items-start">
-                <span className="bg-[#3b82f6] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-medium mr-3 mt-0.5 flex-shrink-0">
-                  2
-                </span>
-                Select the text you want to format
-              </li>
-              <li className="flex items-start">
-                <span className="bg-[#3b82f6] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-medium mr-3 mt-0.5 flex-shrink-0">
-                  3
-                </span>
-                Click a style button: <strong>𝐁</strong> for bold, <em>𝐼</em> for italic, or <code>𝙼</code> for monospace
-              </li>
-              <li className="flex items-start">
-                <span className="bg-[#3b82f6] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-medium mr-3 mt-0.5 flex-shrink-0">
-                  4
-                </span>
-                Copy the formatted text and use it anywhere!
-              </li>
-            </ol>
+          {/* Style Examples */}
+          <div className="examples">
+            <div className="example-item">
+              <h3>Bold Ej. 𝗔 𝗮</h3>
+              <p>𝗪𝗿𝗶𝘁𝗲 𝘆𝗼𝘂𝗿 𝘁𝗲𝘅𝘁 𝗮𝗯𝗼𝘃𝗲</p>
+            </div>
+            
+            <div className="example-item">
+              <h3>Italic Ej. 𝘈 𝘢</h3>
+              <p>𝘞𝘳𝘪𝘵𝘦 𝘺𝘰𝘶𝘳 𝘵𝘦𝘹𝘵 𝘢𝘣𝘰𝘷𝘦</p>
+            </div>
+            
+            <div className="example-item">
+              <h3>Monospace Ej. 𝙰 𝚊</h3>
+              <p>𝚆𝚛𝚒𝚝𝚎 𝚢𝚘𝚞𝚛 𝚝𝚎𝚡𝚝 𝚊𝚋𝚘𝚟𝚎</p>
+            </div>
+          </div>
+          
+          {/* FAQ Section */}
+          <div className="faq">
+            <div className="faq-item">
+              <h2>How to bold text?</h2>
+              <p>
+                To <strong>bold text</strong>, simply copy and paste the text you want to highlight in the box above and we will automatically return the text in bold.
+              </p>
+            </div>
+            
+            <div className="faq-item">
+              <h2>Is this tool free?</h2>
+              <p>
+                Yes! We have created it for you, so you can <strong>highlight your content</strong>, and make your text stand out! 😊
+              </p>
+            </div>
+            
+            <div className="faq-item">
+              <h2>But... Why use formatted text?</h2>
+              <p>
+                Formatted text is a way to highlight your content and make it stand out. It's a way to <strong>grab attention</strong> and highlight important parts of your content.
+              </p>
+            </div>
+            
+            <div className="faq-item">
+              <h2>Is formatted text enough to create standout content?</h2>
+              <p>
+                <strong>No</strong>, formatted text is a way to highlight your content, but it is not enough to create standout content! It is important that the content itself is relevant and adds value.
+              </p>
+            </div>
           </div>
         </div>
       </main>
       
-      <Footer className="bg-white" />
+      <Footer />
     </div>
   );
 };

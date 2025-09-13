@@ -44,19 +44,19 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 
     const variantClasses = {
       primary: [
-        'bg-[#3b82f6] text-white',
-        'hover:bg-[#2563eb]',
-        'focus:ring-[#3b82f6]',
+        'bg-blue-500 text-white',
+        'hover:bg-blue-600',
+        'focus:ring-blue-500',
       ],
       secondary: [
-        'bg-[#e5e7eb] text-[#374151]',
-        'hover:bg-[#d1d5db]',
-        'focus:ring-[#6b7280]',
+        'bg-gray-200 text-gray-700',
+        'hover:bg-gray-300',
+        'focus:ring-gray-500',
       ],
       outline: [
-        'border-2 border-[#3b82f6] text-[#3b82f6] bg-transparent',
-        'hover:bg-[#eff6ff]',
-        'focus:ring-[#3b82f6]',
+        'border-2 border-blue-500 text-blue-500 bg-transparent',
+        'hover:bg-blue-50',
+        'focus:ring-blue-500',
       ],
     };
 
