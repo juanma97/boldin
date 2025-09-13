@@ -1,0 +1,196 @@
+# Reglas de Desarrollo - Buenas Prácticas
+
+## Principios SOLID
+
+### Single Responsibility Principle (SRP)
+
+- Cada clase/función debe tener una sola razón para cambiar
+- Una clase debe tener una sola responsabilidad
+- Divide funciones largas en funciones más pequeñas y específicas
+- Evita clases "God" que hacen demasiadas cosas
+
+### Open/Closed Principle (OCP)
+
+- Las entidades deben estar abiertas para extensión pero cerradas para modificación
+- Usa interfaces, herencia y composición para extender funcionalidad
+- Evita modificar código existente cuando agregues nuevas características
+- Prefiere inyección de dependencias sobre implementaciones concretas
+
+### Liskov Substitution Principle (LSP)
+
+- Los objetos de una clase derivada deben poder reemplazar objetos de la clase base
+- Las subclases deben ser sustituibles por sus clases base sin alterar el comportamiento
+- Respeta los contratos de las interfaces padre
+
+### Interface Segregation Principle (ISP)
+
+- Los clientes no deben depender de interfaces que no usan
+- Crea interfaces específicas y pequeñas en lugar de interfaces grandes
+- Divide interfaces grandes en varias más pequeñas y específicas
+
+### Dependency Inversion Principle (DIP)
+
+- Depende de abstracciones, no de concreciones
+- Los módulos de alto nivel no deben depender de módulos de bajo nivel
+- Usa inyección de dependencias
+- Define interfaces para abstraer dependencias externas
+
+## Clean Code
+
+### Nomenclatura
+
+- Usa nombres descriptivos y reveladores de intención
+- Evita abreviaciones y nombres ambiguos
+- Los nombres de funciones deben ser verbos
+- Los nombres de clases deben ser sustantivos
+- Usa consistencia en la nomenclatura
+
+### Funciones
+
+- Las funciones deben ser pequeñas (idealmente menos de 20 líneas)
+- Una función debe hacer una sola cosa
+- Usa nombres descriptivos para las funciones
+- Limita el número de parámetros (máximo 3-4)
+- Evita efectos secundarios ocultos
+- Prefiere funciones puras cuando sea posible
+
+### Comentarios
+
+- El código debe ser auto-documentado
+- Usa comentarios solo cuando sea necesario explicar "por qué", no "qué"
+- Evita comentarios redundantes
+- Mantén los comentarios actualizados
+- Elimina código comentado
+
+### Formato y Estructura
+
+- Usa indentación consistente
+- Agrupa código relacionado
+- Usa espacios en blanco para separar conceptos
+- Mantén líneas de código cortas (máximo 80-120 caracteres)
+- Organiza las importaciones de manera consistente
+
+### Control de Errores
+
+- Usa excepciones en lugar de códigos de error
+- Crea excepciones específicas para diferentes tipos de errores
+- No ignores excepciones silenciosamente
+- Valida entradas en los límites del sistema
+- Usa logging apropiado para errores
+
+## Testing
+
+### Principios Generales
+
+- Escribe tests antes de escribir código (TDD cuando sea posible)
+- Cada test debe verificar una sola cosa
+- Los tests deben ser independientes entre sí
+- Los tests deben ser rápidos y determinísticos
+- Mantén una cobertura de código alta (>80%)
+
+### Nomenclatura de Tests
+
+- Usa nombres descriptivos que expliquen qué se está probando
+- Formato: `should_[expected_behavior]_when_[condition]`
+- Ejemplo: `should_return_user_when_valid_id_provided`
+
+### Estructura de Tests
+
+- Usa el patrón AAA (Arrange, Act, Assert)
+- Arrange: Prepara los datos de prueba
+- Act: Ejecuta la acción que se está probando
+- Assert: Verifica el resultado esperado
+
+### Tipos de Tests
+
+- **Unit Tests**: Prueban componentes individuales aislados
+- **Integration Tests**: Prueban la interacción entre componentes
+- **End-to-End Tests**: Prueban flujos completos de usuario
+- **Performance Tests**: Verifican rendimiento bajo carga
+
+### Test Data
+
+- Usa factories o builders para crear datos de prueba
+- Evita hardcodear valores de prueba
+- Limpia datos de prueba después de cada test
+- Usa mocks y stubs para dependencias externas
+
+## Seguridad
+
+### Autenticación y Autorización
+
+- Nunca almacenes credenciales en texto plano
+- Usa hashing seguro para contraseñas (bcrypt, scrypt, Argon2)
+- Implementa autenticación multifactor cuando sea posible
+- Usa tokens JWT con expiración apropiada
+- Implementa rate limiting para prevenir ataques de fuerza bruta
+
+### Validación de Datos
+
+- Valida y sanitiza todas las entradas de usuario
+- Usa whitelisting en lugar de blacklisting
+- Implementa validación tanto en cliente como en servidor
+- Previene inyección SQL usando consultas parametrizadas
+- Escapa datos antes de mostrarlos para prevenir XSS
+
+### Manejo de Datos Sensibles
+
+- Nunca logges información sensible
+- Usa variables de entorno para configuración sensible
+- Implementa cifrado para datos en reposo y en tránsito
+- Minimiza la exposición de datos personales
+- Implementa políticas de retención de datos
+
+### Configuración Segura
+
+- Usa HTTPS en todas las comunicaciones
+- Implementa headers de seguridad apropiados
+- Mantén dependencias actualizadas
+- Usa herramientas de análisis de vulnerabilidades
+- Configura CORS apropiadamente
+
+### Logging y Monitoreo
+
+- Loguea eventos de seguridad importantes
+- No logues información sensible
+- Implementa alertas para actividades sospechosas
+- Usa niveles de log apropiados
+- Implementa auditoría para acciones críticas
+
+## Directrices Generales
+
+### Control de Versiones
+
+- Haz commits pequeños y frecuentes
+- Usa mensajes de commit descriptivos
+- Sigue conventional commits cuando sea posible
+- Nunca commitees credenciales o información sensible
+- Usa branching strategy apropiado (Git Flow, GitHub Flow)
+
+### Documentación
+
+- Mantén documentation actualizada
+- Documenta APIs con OpenAPI/Swagger
+- Incluye ejemplos de uso
+- Documenta decisiones arquitectónicas importantes
+- Mantén README files informativos
+
+### Performance
+
+- Evita optimización prematura
+- Mide antes de optimizar
+- Usa lazy loading cuando sea apropiado
+- Implementa caching estratégicamente
+- Monitorea performance en producción
+
+### Code Review
+
+- Revisa todos los cambios de código
+- Busca violaciones de estas reglas
+- Verifica que existan tests apropiados
+- Comprueba consideraciones de seguridad
+- Asegúrate de que el código sea legible y mantenible
+
+---
+
+**Nota**: Estas reglas deben adaptarse según el lenguaje de programación y el contexto específico del proyecto. El objetivo es mantener código limpio, seguro, testeable y mantenible.
